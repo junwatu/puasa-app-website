@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -16,13 +17,19 @@
       --amber: #D4943A;
       --text: #F0EDE6;
       --text-muted: #A8A5B8;
-      --surface: rgba(255,255,255,0.05);
-      --surface-border: rgba(255,255,255,0.08);
+      --surface: rgba(255, 255, 255, 0.05);
+      --surface-border: rgba(255, 255, 255, 0.08);
     }
 
-    * { margin: 0; padding: 0; box-sizing: border-box; }
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
 
-    html { scroll-behavior: smooth; }
+    html {
+      scroll-behavior: smooth;
+    }
 
     body {
       font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Helvetica Neue', sans-serif;
@@ -35,21 +42,34 @@
     /* Stars background */
     .stars {
       position: fixed;
-      top: 0; left: 0; right: 0; bottom: 0;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
       pointer-events: none;
       z-index: 0;
     }
+
     .star {
       position: absolute;
-      width: 2px; height: 2px;
-      background: rgba(255,224,130,0.6);
+      width: 2px;
+      height: 2px;
+      background: rgba(255, 224, 130, 0.6);
       border-radius: 50%;
       animation: twinkle var(--dur, 3s) ease-in-out infinite;
       animation-delay: var(--delay, 0s);
     }
+
     @keyframes twinkle {
-      0%, 100% { opacity: 0.2; }
-      50% { opacity: 1; }
+
+      0%,
+      100% {
+        opacity: 0.2;
+      }
+
+      50% {
+        opacity: 1;
+      }
     }
 
     /* Layout */
@@ -64,19 +84,23 @@
     /* Nav */
     nav {
       position: fixed;
-      top: 0; left: 0; right: 0;
+      top: 0;
+      left: 0;
+      right: 0;
       z-index: 100;
       padding: 16px 0;
-      background: rgba(12,10,44,0.8);
+      background: rgba(12, 10, 44, 0.8);
       backdrop-filter: blur(20px);
       -webkit-backdrop-filter: blur(20px);
       border-bottom: 1px solid var(--surface-border);
     }
+
     nav .container {
       display: flex;
       align-items: center;
       justify-content: space-between;
     }
+
     .nav-brand {
       display: flex;
       align-items: center;
@@ -84,20 +108,25 @@
       text-decoration: none;
       color: var(--text);
     }
+
     .nav-brand img {
-      width: 32px; height: 32px;
+      width: 32px;
+      height: 32px;
       border-radius: 8px;
     }
+
     .nav-brand span {
       font-size: 18px;
       font-weight: 600;
       letter-spacing: -0.02em;
     }
+
     .nav-links {
       display: flex;
       gap: 32px;
       list-style: none;
     }
+
     .nav-links a {
       color: var(--text-muted);
       text-decoration: none;
@@ -105,7 +134,10 @@
       font-weight: 500;
       transition: color 0.2s;
     }
-    .nav-links a:hover { color: var(--text); }
+
+    .nav-links a:hover {
+      color: var(--text);
+    }
 
     /* Hero */
     .hero {
@@ -117,12 +149,15 @@
       text-align: center;
       padding-top: 80px;
     }
+
     .hero-icon {
-      width: 120px; height: 120px;
+      width: 120px;
+      height: 120px;
       border-radius: 28px;
       margin-bottom: 32px;
-      box-shadow: 0 20px 60px rgba(255,193,7,0.15);
+      box-shadow: 0 20px 60px rgba(255, 193, 7, 0.15);
     }
+
     .hero h1 {
       font-size: 64px;
       font-weight: 700;
@@ -134,6 +169,7 @@
       -webkit-text-fill-color: transparent;
       background-clip: text;
     }
+
     .hero .tagline {
       font-size: 20px;
       color: var(--text-muted);
@@ -141,17 +177,20 @@
       font-weight: 400;
       letter-spacing: -0.01em;
     }
+
     .hero .sub {
       font-size: 15px;
       color: var(--text-muted);
       opacity: 0.7;
       margin-bottom: 40px;
     }
+
     .hero-cta {
       display: flex;
       gap: 16px;
       align-items: center;
     }
+
     .btn-primary {
       display: inline-flex;
       align-items: center;
@@ -167,13 +206,17 @@
       border: none;
       cursor: pointer;
     }
+
     .btn-primary:hover {
       transform: translateY(-2px);
-      box-shadow: 0 8px 30px rgba(42,143,122,0.3);
+      box-shadow: 0 8px 30px rgba(42, 143, 122, 0.3);
     }
+
     .btn-primary svg {
-      width: 18px; height: 18px;
+      width: 18px;
+      height: 18px;
     }
+
     .btn-secondary {
       display: inline-flex;
       align-items: center;
@@ -189,15 +232,17 @@
       transition: background 0.2s, border-color 0.2s;
       cursor: pointer;
     }
+
     .btn-secondary:hover {
-      background: rgba(255,255,255,0.08);
-      border-color: rgba(255,255,255,0.15);
+      background: rgba(255, 255, 255, 0.08);
+      border-color: rgba(255, 255, 255, 0.15);
     }
+
     .badge {
       display: inline-block;
       padding: 6px 14px;
-      background: rgba(255,193,7,0.1);
-      border: 1px solid rgba(255,193,7,0.2);
+      background: rgba(255, 193, 7, 0.1);
+      border: 1px solid rgba(255, 193, 7, 0.2);
       border-radius: 20px;
       font-size: 13px;
       color: var(--gold);
@@ -209,19 +254,24 @@
     .menubar-section {
       padding: 100px 0;
     }
+
     .menubar-section .container {
       display: flex;
       flex-direction: column;
       align-items: center;
     }
+
     .section-label {
+      display: block;
       font-size: 13px;
       text-transform: uppercase;
       letter-spacing: 0.1em;
       color: var(--teal-light);
       font-weight: 600;
       margin-bottom: 12px;
+      text-align: center;
     }
+
     .section-title {
       font-size: 40px;
       font-weight: 700;
@@ -229,13 +279,14 @@
       text-align: center;
       margin-bottom: 16px;
     }
+
     .section-desc {
       font-size: 17px;
       color: var(--text-muted);
       text-align: center;
       max-width: 540px;
       line-height: 1.6;
-      margin-bottom: 56px;
+      margin: 0 auto 56px;
     }
 
     /* Mockup */
@@ -244,8 +295,9 @@
       width: 100%;
       max-width: 640px;
     }
+
     .macos-menubar {
-      background: rgba(30,30,30,0.95);
+      background: rgba(30, 30, 30, 0.95);
       border-radius: 8px 8px 0 0;
       padding: 6px 16px;
       display: flex;
@@ -253,47 +305,63 @@
       justify-content: flex-end;
       gap: 16px;
       font-size: 13px;
-      color: rgba(255,255,255,0.85);
+      color: rgba(255, 255, 255, 0.85);
       backdrop-filter: blur(20px);
     }
+
     .menubar-item {
       display: flex;
       align-items: center;
       gap: 4px;
       opacity: 0.6;
     }
+
     .menubar-item.active {
       opacity: 1;
-      background: rgba(255,255,255,0.12);
+      background: rgba(255, 255, 255, 0.12);
       padding: 2px 8px;
       border-radius: 4px;
       margin: -2px -8px;
     }
-    .menubar-clock { opacity: 0.6; }
+
+    .menubar-clock {
+      opacity: 0.6;
+    }
 
     .mockup-dropdown {
-      background: rgba(40,38,58,0.97);
-      border: 1px solid rgba(255,255,255,0.1);
+      background: rgba(40, 38, 58, 0.97);
+      border: 1px solid rgba(255, 255, 255, 0.1);
       border-radius: 0 0 12px 12px;
       padding: 16px;
       width: 300px;
       margin-left: auto;
       backdrop-filter: blur(30px);
-      box-shadow: 0 20px 60px rgba(0,0,0,0.5);
+      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
     }
+
     .mock-header {
       display: flex;
       align-items: center;
       gap: 8px;
       margin-bottom: 12px;
     }
-    .mock-moon { color: var(--teal-light); font-size: 16px; }
-    .mock-title { font-weight: 600; font-size: 15px; }
+
+    .mock-moon {
+      color: var(--teal-light);
+      font-size: 16px;
+    }
+
+    .mock-title {
+      font-weight: 600;
+      font-size: 15px;
+    }
+
     .mock-divider {
       height: 1px;
-      background: rgba(255,255,255,0.08);
+      background: rgba(255, 255, 255, 0.08);
       margin: 10px 0;
     }
+
     .mock-row {
       display: flex;
       align-items: center;
@@ -301,18 +369,36 @@
       padding: 6px 4px;
       font-size: 14px;
     }
-    .mock-row .icon { width: 20px; text-align: center; font-size: 13px; }
-    .mock-row .label { flex: 1; }
+
+    .mock-row .icon {
+      width: 20px;
+      text-align: center;
+      font-size: 13px;
+    }
+
+    .mock-row .label {
+      flex: 1;
+    }
+
     .mock-row .time {
       font-variant-numeric: tabular-nums;
       color: var(--text-muted);
     }
+
     .mock-row.active {
-      background: rgba(42,143,122,0.12);
+      background: rgba(42, 143, 122, 0.12);
       border-radius: 6px;
     }
-    .mock-row.active .icon { color: var(--teal-light); }
-    .mock-row.active .time { color: var(--text); font-weight: 600; }
+
+    .mock-row.active .icon {
+      color: var(--teal-light);
+    }
+
+    .mock-row.active .time {
+      color: var(--text);
+      font-weight: 600;
+    }
+
     .mock-location {
       font-size: 13px;
       color: var(--text-muted);
@@ -320,18 +406,25 @@
       align-items: center;
       gap: 6px;
     }
+
     .mock-status {
       display: flex;
       align-items: center;
       gap: 8px;
       font-size: 14px;
     }
+
     .status-dot {
-      width: 8px; height: 8px;
+      width: 8px;
+      height: 8px;
       border-radius: 50%;
       background: var(--teal-light);
     }
-    .status-label { font-weight: 500; }
+
+    .status-label {
+      font-weight: 500;
+    }
+
     .status-countdown {
       margin-left: auto;
       font-variant-numeric: tabular-nums;
@@ -343,12 +436,14 @@
     .features {
       padding: 80px 0;
     }
+
     .features-grid {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
       gap: 24px;
       margin-top: 56px;
     }
+
     .feature-card {
       background: var(--surface);
       border: 1px solid var(--surface-border);
@@ -356,12 +451,15 @@
       padding: 28px;
       transition: background 0.2s, border-color 0.2s;
     }
+
     .feature-card:hover {
-      background: rgba(255,255,255,0.07);
-      border-color: rgba(255,255,255,0.12);
+      background: rgba(255, 255, 255, 0.07);
+      border-color: rgba(255, 255, 255, 0.12);
     }
+
     .feature-icon {
-      width: 44px; height: 44px;
+      width: 44px;
+      height: 44px;
       border-radius: 12px;
       display: flex;
       align-items: center;
@@ -369,15 +467,29 @@
       font-size: 20px;
       margin-bottom: 16px;
     }
-    .feature-icon.teal { background: rgba(42,143,122,0.15); color: var(--teal-light); }
-    .feature-icon.gold { background: rgba(255,193,7,0.12); color: var(--gold); }
-    .feature-icon.amber { background: rgba(212,148,58,0.15); color: var(--amber); }
+
+    .feature-icon.teal {
+      background: rgba(42, 143, 122, 0.15);
+      color: var(--teal-light);
+    }
+
+    .feature-icon.gold {
+      background: rgba(255, 193, 7, 0.12);
+      color: var(--gold);
+    }
+
+    .feature-icon.amber {
+      background: rgba(212, 148, 58, 0.15);
+      color: var(--amber);
+    }
+
     .feature-card h3 {
       font-size: 17px;
       font-weight: 600;
       margin-bottom: 8px;
       letter-spacing: -0.01em;
     }
+
     .feature-card p {
       font-size: 14px;
       color: var(--text-muted);
@@ -388,6 +500,7 @@
     .requirements {
       padding: 80px 0;
     }
+
     .req-box {
       background: var(--surface);
       border: 1px solid var(--surface-border);
@@ -396,6 +509,7 @@
       max-width: 540px;
       margin: 40px auto 0;
     }
+
     .req-item {
       display: flex;
       align-items: center;
@@ -403,28 +517,39 @@
       padding: 10px 0;
       font-size: 15px;
     }
-    .req-item + .req-item {
+
+    .req-item+.req-item {
       border-top: 1px solid var(--surface-border);
     }
+
     .req-check {
       color: var(--teal-light);
       font-size: 16px;
       flex-shrink: 0;
     }
-    .req-label { flex: 1; }
-    .req-value { color: var(--text-muted); font-size: 14px; }
+
+    .req-label {
+      flex: 1;
+    }
+
+    .req-value {
+      color: var(--text-muted);
+      font-size: 14px;
+    }
 
     /* CTA */
     .cta-section {
       padding: 100px 0;
       text-align: center;
     }
+
     .cta-section h2 {
       font-size: 36px;
       font-weight: 700;
       letter-spacing: -0.03em;
       margin-bottom: 16px;
     }
+
     .cta-section p {
       color: var(--text-muted);
       font-size: 17px;
@@ -437,15 +562,20 @@
       border-top: 1px solid var(--surface-border);
       text-align: center;
     }
+
     footer p {
       font-size: 13px;
       color: var(--text-muted);
     }
+
     footer a {
       color: var(--teal-light);
       text-decoration: none;
     }
-    footer a:hover { text-decoration: underline; }
+
+    footer a:hover {
+      text-decoration: underline;
+    }
 
     /* Animations */
     .fade-in {
@@ -453,6 +583,7 @@
       transform: translateY(20px);
       transition: opacity 0.6s ease, transform 0.6s ease;
     }
+
     .fade-in.visible {
       opacity: 1;
       transform: translateY(0);
@@ -460,16 +591,37 @@
 
     /* Responsive */
     @media (max-width: 768px) {
-      .hero h1 { font-size: 40px; }
-      .hero .tagline { font-size: 17px; }
-      .features-grid { grid-template-columns: 1fr; }
-      .hero-cta { flex-direction: column; }
-      .section-title { font-size: 28px; }
-      .nav-links { display: none; }
-      .mockup-dropdown { width: 100%; }
+      .hero h1 {
+        font-size: 40px;
+      }
+
+      .hero .tagline {
+        font-size: 17px;
+      }
+
+      .features-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .hero-cta {
+        flex-direction: column;
+      }
+
+      .section-title {
+        font-size: 28px;
+      }
+
+      .nav-links {
+        display: none;
+      }
+
+      .mockup-dropdown {
+        width: 100%;
+      }
     }
   </style>
 </head>
+
 <body>
 
   <!-- Stars -->
@@ -501,9 +653,9 @@
     <div class="hero-cta">
       <a href="https://dl.kaleng.my.id/PuasaApp.dmg" class="btn-primary">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-          <path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/>
-          <polyline points="7 10 12 15 17 10"/>
-          <line x1="12" y1="15" x2="12" y2="3"/>
+          <path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4" />
+          <polyline points="7 10 12 15 17 10" />
+          <line x1="12" y1="15" x2="12" y2="3" />
         </svg>
         Download for Mac
       </a>
@@ -517,7 +669,8 @@
       <span class="section-label fade-in">Preview</span>
       <h2 class="section-title fade-in">Lives in your menu bar</h2>
       <p class="section-desc fade-in">
-        Puasa stays quietly in your macOS menu bar, showing Sahur and Berbuka times at a glance. Click to see the full schedule with a live countdown.
+        Puasa stays quietly in your macOS menu bar, showing Sahur and Berbuka times at a glance. Click to see the full
+        schedule with a live countdown.
       </p>
 
       <div class="mockup-wrapper fade-in">
@@ -584,9 +737,7 @@
     <div class="container">
       <span class="section-label fade-in">Features</span>
       <h2 class="section-title fade-in">Everything you need for Ramadan</h2>
-      <p class="section-desc fade-in">
-        Simple, focused, and built for macOS.
-      </p>
+      <p class="section-desc fade-in">Simple, focused, and built for macOS.</p>
 
       <div class="features-grid">
         <div class="feature-card fade-in">
@@ -667,20 +818,23 @@
       <p class="fade-in">Download Puasa and keep your fasting schedule in your menu bar.</p>
       <a href="https://dl.kaleng.my.id/PuasaApp.dmg" class="btn-primary fade-in" style="display:inline-flex;">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:18px;height:18px;">
-          <path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/>
-          <polyline points="7 10 12 15 17 10"/>
-          <line x1="12" y1="15" x2="12" y2="3"/>
+          <path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4" />
+          <polyline points="7 10 12 15 17 10" />
+          <line x1="12" y1="15" x2="12" y2="3" />
         </svg>
         Download .dmg
       </a>
-      <p class="fade-in" style="margin-top:12px;font-size:13px;color:var(--text-muted);opacity:0.6;">v1.0.0 &middot; macOS 14+</p>
+      <p class="fade-in" style="margin-top:12px;font-size:13px;color:var(--text-muted);opacity:0.6;">v1.0.0 &middot;
+        macOS 14+</p>
     </div>
   </section>
 
   <!-- Footer -->
   <footer>
     <div class="container">
-      <p>Puasa &middot; Ramadan Fasting Tracker for macOS</p>
+      <p>Puasa &middot; Ramadan Fasting Tracker for macOS &middot; </p>
+      <p style="margin-top: 8px;">By <a href="https://x.com/junwatu">@junwatu</a></p>
+      <p style="margin-top: 8px;">© 2026 Puasa. All rights reserved.</p>
     </div>
   </footer>
 
@@ -713,4 +867,5 @@
     document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
   </script>
 </body>
+
 </html>
