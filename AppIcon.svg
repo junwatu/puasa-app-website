@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1024" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#1C1667"/>
+      <stop offset="1" stop-color="#0C0A2C"/>
+    </linearGradient>
+    <linearGradient id="moonFill" x1="320" y1="300" x2="560" y2="700" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#FFE082"/>
+      <stop offset="1" stop-color="#FFC107"/>
+    </linearGradient>
+    <mask id="moonMask">
+      <rect width="1024" height="1024" fill="black"/>
+      <circle cx="440" cy="490" r="210" fill="white"/>
+      <circle cx="530" cy="440" r="178" fill="black"/>
+    </mask>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1024" height="1024" rx="228" ry="228" fill="url(#bg)"/>
+
+  <!-- Crescent moon -->
+  <circle cx="440" cy="490" r="210" fill="url(#moonFill)" mask="url(#moonMask)"/>
+
+  <!-- Star -->
+  <polygon points="660,290 674,330 716,330 682,358 694,398 660,372 626,398 638,358 604,330 646,330" fill="#FFE082" opacity="0.85"/>
+</svg>
