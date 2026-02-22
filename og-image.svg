@@ -1,0 +1,67 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="630" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#1C1667"/>
+      <stop offset="1" stop-color="#0C0A2C"/>
+    </linearGradient>
+    <linearGradient id="moonFill" x1="0" y1="0" x2="100" y2="100" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#FFE082"/>
+      <stop offset="1" stop-color="#FFC107"/>
+    </linearGradient>
+    <linearGradient id="textGold" x1="0" y1="0" x2="400" y2="0" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#FFE082"/>
+      <stop offset="1" stop-color="#FFC107"/>
+    </linearGradient>
+    <mask id="moonMask">
+      <rect width="1200" height="630" fill="black"/>
+      <circle cx="160" cy="315" r="90" fill="white"/>
+      <circle cx="200" cy="290" r="76" fill="black"/>
+    </mask>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="630" fill="url(#bg)"/>
+
+  <!-- Stars -->
+  <circle cx="100" cy="80" r="1.5" fill="#FFE082" opacity="0.5"/>
+  <circle cx="250" cy="150" r="1" fill="#FFE082" opacity="0.4"/>
+  <circle cx="400" cy="60" r="1.5" fill="#FFE082" opacity="0.6"/>
+  <circle cx="550" cy="120" r="1" fill="#FFE082" opacity="0.3"/>
+  <circle cx="700" cy="50" r="1.5" fill="#FFE082" opacity="0.5"/>
+  <circle cx="850" cy="100" r="1" fill="#FFE082" opacity="0.4"/>
+  <circle cx="950" cy="70" r="1.5" fill="#FFE082" opacity="0.6"/>
+  <circle cx="1050" cy="140" r="1" fill="#FFE082" opacity="0.3"/>
+  <circle cx="1100" cy="60" r="1.5" fill="#FFE082" opacity="0.5"/>
+  <circle cx="150" cy="500" r="1" fill="#FFE082" opacity="0.3"/>
+  <circle cx="300" cy="550" r="1.5" fill="#FFE082" opacity="0.4"/>
+  <circle cx="900" cy="520" r="1" fill="#FFE082" opacity="0.5"/>
+  <circle cx="1050" cy="480" r="1.5" fill="#FFE082" opacity="0.3"/>
+  <circle cx="50" cy="300" r="1" fill="#FFE082" opacity="0.4"/>
+  <circle cx="1150" cy="350" r="1" fill="#FFE082" opacity="0.5"/>
+
+  <!-- Crescent Moon -->
+  <circle cx="160" cy="315" r="90" fill="url(#moonFill)" mask="url(#moonMask)"/>
+
+  <!-- Star accent near moon -->
+  <polygon points="270,230 278,254 302,254 283,268 290,292 270,278 250,292 257,268 238,254 262,254" fill="#FFE082" opacity="0.8"/>
+
+  <!-- App name -->
+  <text x="380" y="280" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Helvetica Neue', sans-serif" font-size="96" font-weight="700" fill="url(#textGold)" letter-spacing="-3">Puasa</text>
+
+  <!-- Tagline -->
+  <text x="384" y="340" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Helvetica Neue', sans-serif" font-size="28" fill="#A8A5B8" font-weight="400">Ramadan Fasting Tracker for macOS</text>
+
+  <!-- Feature pills -->
+  <rect x="384" y="380" width="140" height="36" rx="18" fill="rgba(42,143,122,0.2)" stroke="#2A8F7A" stroke-width="1" stroke-opacity="0.4"/>
+  <text x="414" y="404" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="14" fill="#2A8F7A" font-weight="500">Menu Bar</text>
+
+  <rect x="540" y="380" width="160" height="36" rx="18" fill="rgba(42,143,122,0.2)" stroke="#2A8F7A" stroke-width="1" stroke-opacity="0.4"/>
+  <text x="565" y="404" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="14" fill="#2A8F7A" font-weight="500">Prayer Times</text>
+
+  <rect x="716" y="380" width="160" height="36" rx="18" fill="rgba(42,143,122,0.2)" stroke="#2A8F7A" stroke-width="1" stroke-opacity="0.4"/>
+  <text x="745" y="404" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="14" fill="#2A8F7A" font-weight="500">Live Countdown</text>
+
+  <!-- macOS badge -->
+  <rect x="384" y="440" width="120" height="30" rx="15" fill="rgba(255,193,7,0.1)" stroke="#FFC107" stroke-width="1" stroke-opacity="0.3"/>
+  <text x="404" y="460" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="13" fill="#FFC107" font-weight="500">macOS 14+</text>
+</svg>
